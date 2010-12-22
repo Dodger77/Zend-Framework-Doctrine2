@@ -1,0 +1,19 @@
+Sections:
+  type: entity
+  table: sections
+  fields:
+    id:
+      id: true
+      type: integer
+      unsigned: false
+      nullable: false
+      generator:
+        strategy: IDENTITY
+    title:
+      type: string(100)
+      fixed: false
+      nullable: false
+    body:
+      type: text
+      nullable: false
+  lifecycleCallbacks: {  }
