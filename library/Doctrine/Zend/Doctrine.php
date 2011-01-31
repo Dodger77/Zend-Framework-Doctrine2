@@ -19,21 +19,21 @@ class Doctrine_Zend_Doctrine extends Zend_Application_Resource_ResourceAbstract
         // Entities
         $classLoader = new \Doctrine\Common\ClassLoader(
             'Application\Models',
-            dirname(APPLICATION_PATH)
+            dirname(APPLICATION_PATH) . DIRECTORY_SEPARATOR . 'library'
         );
         $classLoader -> register();
         
         // Proxies
         $classLoader = new \Doctrine\Common\ClassLoader(
             'Application\Proxies',
-            dirname(APPLICATION_PATH)
+            dirname(APPLICATION_PATH) . DIRECTORY_SEPARATOR . 'library'
         );
         $classLoader -> register();
         
         // Repositories
         $classLoader = new \Doctrine\Common\ClassLoader(
             'Application\Repositories',
-            dirname(APPLICATION_PATH)
+            dirname(APPLICATION_PATH) . DIRECTORY_SEPARATOR . 'library'
         );
         $classLoader -> register();
         
